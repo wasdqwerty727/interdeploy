@@ -1,0 +1,11 @@
+{% for entry in entries %}
+    <h2>{{ entry.title }}</h2>
+    <p>{{ entry.content|truncatechars:100 }}</p>
+    {% if entry.image %}
+        <img src="{{ entry.image.url }}" alt="{{ entry.title }}" style="max-width: 200px;">
+    {% endif %}
+    <a href="{{ entry.id }}/">View Details</a>
+    <a href="{{ entry.id }}/edit/">Edit</a>
+    <a href="{{ entry.id }}/delete/">Delete</a>
+{% endfor %}
+<a href="create/">Create New Entry</a>

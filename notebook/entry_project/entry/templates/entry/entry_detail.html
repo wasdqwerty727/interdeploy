@@ -1,0 +1,8 @@
+<h1>{{ entry.title }}</h1>
+<p>{{ entry.content }}</p>
+{% if entry.image %}
+    <img src="{{ entry.image.url }}" alt="{{ entry.title }}" style="max-width: 400px;">
+{% endif %}
+<a href="/edit/">Edit</a>
+<a href="/delete/">Delete</a>
+<a href="/">Back to List</a>
